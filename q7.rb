@@ -9,4 +9,4 @@ end
 
 str = "hello people of the world"
 
-p HelperMethods.titleize(str)
+# p HelperMethods.titleize(str)

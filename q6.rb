@@ -17,13 +17,8 @@ Benchmark.bm do |bm|
   def recursive_even(n)
     @arr = []
     @i = 1
-    def recursor(n)
+    def self.recursor(n)
       n == 0 ? @arr : @i.even? ? (@arr << @i; @i+=1; recursor(n-1)) : (@i+=1; recursor(n))
-      # if n == 0
-      #   return @arr
-      # else
-      #   @i.even? ? (arr < @i; @i+=1; recursor(n-1)) : (@i+=1; recursor(n))
-      # end
     end
     recursor(n)
   end
