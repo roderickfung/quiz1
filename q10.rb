@@ -6,20 +6,22 @@
 
 
 module Alpha
-  def alpha
-    puts "Called This!"
+  def alpha(x)
+    puts x
   end
 end
 
-class Beta
-  include Alpha
-end
+module Theta
+  class Beta
+    include Alpha
+  end
 
-class Zulu
-  extend Alpha
+  class Zulu
+    extend Alpha
+  end
 end
 
 # p Beta.alpha
-Beta.new.alpha
-Zulu.alpha
+Theta::Beta.new.alpha("Try This!!")
+Theta::Zulu.alpha("Try This!!")
 # p Zulu.new.alpha
